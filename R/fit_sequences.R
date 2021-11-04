@@ -15,7 +15,7 @@ fit_sequences <- function(sequence_data, gt = 4.7){
 	fit <- nnet::multinom(VariantReduced ~ ns(t, df=2),
 												data = as.data.frame(sequence_data %>%
 																						 	dplyr::mutate(Total = ifelse(Total==0,.1,Total))),
-												weights = Total)
+												weights = Total, trace = FALSE)
 	
 	new_t <-max(sequence_data$t)+30
 	
