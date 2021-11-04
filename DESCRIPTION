@@ -6,4 +6,7 @@ imports:
   nnet,
   gamm4,
   emmeans,
-  ggplot2
+  ggplot2,
+  tidyr,
+  tibble,
+  quarto
