@@ -1,0 +1,23 @@
+project:
+  type: site
+  output-dir: docs
+
+site:
+  title: "SARS2 Fitness Tracker"
+  navbar:
+    type: dark
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    right:
+      - href: https://michaeldewittjr.com
+        text: Main
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+

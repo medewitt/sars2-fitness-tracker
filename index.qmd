@@ -1,0 +1,64 @@
+---
+title: "sars2"
+execute:
+  warning: false
+  echo : false
+  error: false
+---
+
+```{r}
+#| echo: false
+devnul <- capture.output(lapply(list.files("R", full.names = TRUE), source))
+
+dat <- prep_sequences()
+
+out <- fit_sequences(dat)
+
+```
+
+Below represents the fitted variant progression in North Carolina.
+
+```{r}
+
+plot_sequences(out$out_with_dates)
+
+```
+
+The below table represents the estimate growth rate advantages of the different variants over wild-type variants.
+Values greater than one indicate an advantage over the wild-type.
+This assumes a generation time of 4.7 days.
+
+```{r}
+library(dplyr, warn.conflicts = FALSE)
+out$R_variants %>% 
+as_tibble() %>% 
+ungroup() %>% 
+select(contrast, everything()) %>% 
+setNames(c("Contrast", "Estimate", "Lower", "Upper")) %>% 
+mutate_if(is.numeric, round, digits = 2) %>% 
+knitr::kable()
+
+```
+
+```{r}
+library(ggplot2)
+out$R_variants %>% 
+	as_tibble() %>% 
+	ungroup() %>% 
+	select(contrast, everything()) %>% 
+	setNames(c("Contrast", "Estimate", "Lower", "Upper")) %>% 
+	mutate_if(is.numeric, round, digits = 2) %>% 
+	ggplot(aes(reorder(Contrast,Estimate)))+
+	geom_pointrange(aes(y = Estimate, 
+											ymin = Lower,
+											ymax = Upper))+
+	coord_flip()+
+	theme_bw()+
+	geom_hline(yintercept = 1, col = "orange", lty = "dashed")+
+	labs(
+		y = "Fitness Advantage",
+		x = NULL,
+		title = "Fitness Advantage of SARS2 Variants in NC",
+		caption = "@medewittjr"
+	)
+```

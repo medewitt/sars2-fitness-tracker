@@ -1,0 +1,14 @@
+[
+  {
+    "href": "index.html",
+    "title": "sars2",
+    "section": "",
+    "text": "# weights:  32 (21 variable)\ninitial  value 175734.436464 \niter  10 value 33927.597097\niter  20 value 32237.752063\niter  30 value 31955.944214\niter  40 value 31952.229510\niter  50 value 31951.902649\niter  60 value 31950.766153\niter  70 value 31950.549171\niter  70 value 31950.549123\niter  70 value 31950.549123\nfinal  value 31950.549123 \nconverged\n\n\nBelow represents the fitted variant progression in North Carolina.\n\n\n\n\n\nThe below table represents the estimate growth rate advantages of the different variants over wild-type variants. Values greater than one indicate an advantage over the wild-type. This assumes a generation time of 4.7 days.\n\n\n\n\nContrast\nEstimate\nLower\nUpper\n\n\n\n\nAlpha - Other lineages\n0.91\n0.90\n0.92\n\n\nBeta - Other lineages\n0.89\n0.84\n0.93\n\n\nDelta - Other lineages\n1.68\n1.65\n1.71\n\n\n(Delta-Plus) - Other lineages\n1.19\n1.08\n1.31\n\n\nGamma - Other lineages\n1.02\n1.01\n1.04\n\n\nEpsilon - Other lineages\n0.77\n0.65\n0.92\n\n\nMu - Other lineages\n1.30\n1.14\n1.47"
+  },
+  {
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
