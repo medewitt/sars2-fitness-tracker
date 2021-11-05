@@ -10,6 +10,8 @@ site:
     left:
       - href: index.qmd
         text: Home
+      - href: "https://michaeldewittjr.com/promed-scanner/"
+        text: "PROMED Scanner"
       - about.qmd
     right:
       - href: https://michaeldewittjr.com

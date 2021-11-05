@@ -1,5 +1,5 @@
 ---
-title: "sars2"
+title: "SARS-CoV-2 Fitness Tracker for North Carolina"
 execute:
   warning: false
   echo : false
@@ -19,6 +19,8 @@ out <- fit_sequences(dat)
 Below represents the fitted variant progression in North Carolina.
 
 ```{r}
+#| label: fig-plot1
+#| fig-cap: "Proportion of SARS-CoV-2 Variants in Circulation (Fitted)"
 
 plot_sequences(out$out_with_dates)
 
@@ -36,13 +38,13 @@ ungroup() %>%
 select(contrast, everything()) %>% 
 setNames(c("Contrast", "Estimate", "Lower", "Upper")) %>% 
 mutate_if(is.numeric, round, digits = 2) %>% 
-knitr::kable()
+knitr::kable(caption = "Fitness Advantages Over Wild-Type")
 
 ```
 
 ```{r}
 library(ggplot2)
-out$R_variants %>% 
+p <- out$R_variants %>% 
 	as_tibble() %>% 
 	ungroup() %>% 
 	select(contrast, everything()) %>% 
@@ -61,4 +63,11 @@ out$R_variants %>%
 		title = "Fitness Advantage of SARS2 Variants in NC",
 		caption = "@medewittjr"
 	)
+```
+
+```{r}
+#| label: fig-plot
+#| fig-cap: "Fitness Advantages of SARS-CoV-2 Variants"
+
+p
 ```
