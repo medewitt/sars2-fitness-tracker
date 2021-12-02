@@ -11,4 +11,5 @@ imports:
   tibble,
   quarto,
   lubridate,
-  ggrepel
+  ggrepel,
+  jsonlite
