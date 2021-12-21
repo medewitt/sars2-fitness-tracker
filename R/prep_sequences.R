@@ -18,21 +18,23 @@ prep_sequences <- function(state_use = "North Carolina"){
 	
 	dat_nc[,Sequenced:= round(N * Perc)]
 	
-	dat_nc[,VariantReduced := fcase(
-		Variant == "B.1.1.7", "Alpha",
-		Variant == "B.1.351", "Beta",
-		Variant == "P.1", "Gamma",
-		Variant == "B.1.617.2", "Delta",
-		Variant == "AY.1", "Delta",
-		Variant == "AY.2", "Delta-Plus",
-		Variant == "AY.3", "Delta",
-		Variant == "B.1.427/B.1.429", "Epsilon",
-		Variant == "B.1.621", "Mu",
-		Variant == "Other", "Other lineages",
-		default = "Other lineages"
-	)]
 	
-	dat_nc[,VariantReduced:=factor(VariantReduced, c("Other lineages", "Alpha", "Beta","Delta", "Delta-Plus","Gamma", "Epsilon", "Mu"))]
+dat_nc[,VariantReduced := fcase(
+  Variant == "B.1.1.7", "Alpha",
+  Variant == "B.1.351", "Beta",
+  Variant == "P.1", "Gamma",
+  Variant == "B.1.617.2", "Delta",
+  Variant == "AY.1", "Delta",
+  Variant == "AY.2", "Delta-Plus",
+  Variant == "AY.3", "Delta",
+  Variant == "B.1.427/B.1.429", "Epsilon",
+  Variant == "B.1.621", "Mu",
+  Variant == "B.1.1.529", "Omicron",
+  Variant == "Other", "Other lineages",
+  default = "Other lineages"
+)]
+	
+	dat_nc[,VariantReduced:=factor(VariantReduced, c("Other lineages", "Alpha", "Beta","Delta", "Delta-Plus","Gamma", "Epsilon", "Mu", "Omicron"))]
 	
 	dat_nc_red <- dat_nc[,.(Total = sum(Sequenced)), by = c("UpdateDTS", "VariantReduced")]
 	
