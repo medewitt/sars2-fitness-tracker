@@ -8,7 +8,7 @@ prep_sequences <- function(state_use = "North Carolina"){
 	require(data.table)
 	require(dplyr)
 	`%>%` <- dplyr::`%>%`
-	dat_url <- "https://raw.githubusercontent.com/conedatascience/cov2-variant-tracker/master/data/cdc-nc-data.csv"
+	dat_url <- "https://raw.githubusercontent.com/medewitt/cov2-variant-tracker/master/data/cdc-nc-data.csv"
 	
 	dat_raw <- data.table::fread(dat_url)
 	
@@ -27,14 +27,20 @@ dat_nc[,VariantReduced := fcase(
   Variant == "AY.1", "Delta",
   Variant == "AY.2", "Delta-Plus",
   Variant == "AY.3", "Delta",
+  Variant == "B.1.617.2 (Delta)", "Delta",
   Variant == "B.1.427/B.1.429", "Epsilon",
   Variant == "B.1.621", "Mu",
   Variant == "B.1.1.529", "Omicron",
+  Variant == "B.1.1.529 (Omicron)", "Omicron",
+  Variant == "BA.2 (Omicron)", "Omicron",
+  Variant == "BA.2.12.1 (Omicron)", "Omicron",
   Variant == "Other", "Other lineages",
+  Variant == "BA.4 (Omicron)", "BA.4",
+  Variant == "BA.5 (Omicron)", "BA.5",
   default = "Other lineages"
 )]
 	
-	dat_nc[,VariantReduced:=factor(VariantReduced, c("Other lineages", "Alpha", "Beta","Delta", "Delta-Plus","Gamma", "Epsilon", "Mu", "Omicron"))]
+	dat_nc[,VariantReduced:=factor(VariantReduced, c("Other lineages", "Alpha", "Beta","Delta", "Delta-Plus","Gamma", "Epsilon", "Mu", "Omicron", "BA.4", "BA.5"))]
 	
 	dat_nc_red <- dat_nc[,.(Total = sum(Sequenced)), by = c("UpdateDTS", "VariantReduced")]
 	
