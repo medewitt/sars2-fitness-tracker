@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "SARS-CoV-2 Fitness Tracker for North Carolina",
-    "section": "",
-    "text": "Below represents the fitted variant progression in North Carolina.\n\n\n\n\n\nFigure 1: Proportion of SARS-CoV-2 Variants in Circulation (Fitted)\n\n\n\n\nThe below table represents the estimate growth rate advantages of the different variants over wild-type variants. Values greater than one indicate an advantage over the wild-type. This assumes a generation time of 4.7 days.\n\n\n\nFitness Advantages Over Wild-Type\n\n\nContrast\nEstimate\nLower\nUpper\n\n\n\n\nAlpha - Other lineages\n0.25\n0.23\n0.26\n\n\nBeta - Other lineages\n0.96\n0.95\n0.97\n\n\nDelta - Other lineages\n0.88\n0.87\n0.89\n\n\n(Delta-Plus) - Other lineages\n1.02\n1.00\n1.04\n\n\nGamma - Other lineages\n0.70\n0.64\n0.77\n\n\nEpsilon - Other lineages\n0.96\n0.94\n0.97\n\n\nMu - Other lineages\n0.99\n0.95\n1.02\n\n\nOmicron - Other lineages\n2.17\n2.13\n2.20\n\n\nBA.4 - Other lineages\n1.89\n1.74\n2.06\n\n\nBA.5 - Other lineages\n1.66\n1.54\n1.78\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Fitness Advantages of SARS-CoV-2 Variants"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SARS-CoV-2 Fitness Tracker for North Carolina",
+    "section": "",
+    "text": "Below represents the fitted variant progression in North Carolina.\n\n\n\n\n\nFigure 1: Proportion of SARS-CoV-2 Variants in Circulation (Fitted)\n\n\n\n\nThe below table represents the estimate growth rate advantages of the different variants over wild-type variants. Values greater than one indicate an advantage over the wild-type. This assumes a generation time of 4.7 days.\n\n\n\nFitness Advantages Over Wild-Type\n\n\nContrast\nEstimate\nLower\nUpper\n\n\n\n\nAlpha - Other lineages\n0.25\n0.23\n0.26\n\n\nBeta - Other lineages\n0.96\n0.95\n0.97\n\n\nDelta - Other lineages\n0.88\n0.87\n0.89\n\n\n(Delta-Plus) - Other lineages\n1.02\n1.00\n1.04\n\n\nGamma - Other lineages\n0.70\n0.64\n0.77\n\n\nEpsilon - Other lineages\n0.96\n0.94\n0.97\n\n\nMu - Other lineages\n0.99\n0.95\n1.02\n\n\nOmicron - Other lineages\n2.17\n2.13\n2.20\n\n\nBA.4 - Other lineages\n1.89\n1.74\n2.06\n\n\nBA.5 - Other lineages\n1.66\n1.54\n1.78\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Fitness Advantages of SARS-CoV-2 Variants"
   }
 ]
